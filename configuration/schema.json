@@ -1,0 +1,126 @@
+{
+  "definitions": {
+    "display": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "enum": [
+                "city",
+                "complement",
+                "country",
+                "neighborhood",
+                "number",
+                "postalCode",
+                "receiverName",
+                "reference",
+                "state",
+                "street"
+              ]
+            },
+            "delimiter": { "type": "string" },
+            "delimiterAfter": { "type": "string" }
+          },
+          "required": ["name"]
+        }
+      }
+    },
+    "field": {
+      "type": "object",
+      "properties": {
+        "label": { "type": "string" },
+        "name": {
+          "type": "string",
+          "enum": [
+            "addressType",
+            "city",
+            "complement",
+            "country",
+            "neighborhood",
+            "number",
+            "postalCode",
+            "receiverName",
+            "reference",
+            "state",
+            "street"
+          ]
+        },
+        "hidden": { "type": "boolean" },
+        "maxLength": { "type": "number" },
+        "size": { "type": "string" },
+        "required": { "type": "boolean" },
+        "autoComplete": { "type": "string" },
+        "optionsCaption": { "type": "string" },
+        "options": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": { "type": "string" },
+              "value": { "type": "string" }
+            }
+          }
+        },
+        "elementName": { "type": "string" },
+        "mask": {
+          "type": "string",
+          "description": "Optional mask to format the field for display."
+        }
+      },
+      "required": ["label"]
+    }
+  },
+  "type": "object",
+  "properties": {
+    "fields": {
+      "type": "object",
+      "properties": {
+        "country": { "$ref": "#/definitions/field" },
+        "street": { "$ref": "#/definitions/field" },
+        "number": { "$ref": "#/definitions/field" },
+        "complement": { "$ref": "#/definitions/field" },
+        "reference": { "$ref": "#/definitions/field" },
+        "neighborhood": { "$ref": "#/definitions/field" },
+        "state": { "$ref": "#/definitions/field" },
+        "city": { "$ref": "#/definitions/field" },
+        "receiverName": { "$ref": "#/definitions/field" },
+        "postalCode": {
+          "allOf": [
+            { "$ref": "#/definitions/field" },
+            { "properties": { "forgottenURL": { "type": "string" } } }
+          ]
+        }
+      }
+    },
+    "display": {
+      "type": "object",
+      "properties": {
+        "minimal": {
+          "$ref": "#/definitions/display"
+        },
+        "compact": {
+          "$ref": "#/definitions/display"
+        },
+        "extended": {
+          "$ref": "#/definitions/display"
+        }
+      },
+      "required": ["minimal", "compact", "extended"]
+    },
+    "locationSelect": {
+      "type": "object",
+      "properties": {
+        "countryData": { "type": "object" },
+        "fields": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/field" }
+        }
+      }
+    }
+  },
+  "required": ["fields", "display"]
+}
