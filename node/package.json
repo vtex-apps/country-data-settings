@@ -1,0 +1,8 @@
+{
+  "name": "vtex.country-data-settings",
+  "private": true,
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@vtex/api": "6.31.1"
+  }
+}

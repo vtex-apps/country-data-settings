@@ -1,0 +1,76 @@
+type PhoneData {
+  countryCode: String!
+  mask: String
+}
+
+type FieldOptionData {
+  label: String!
+  value: String!
+}
+
+type FieldData {
+  label: String!
+  name: String
+  hidden: Boolean
+  maxLength: Int
+  size: String
+  required: Boolean
+  autoComplete: String
+  optionsCaption: String
+  options: [FieldOptionData!]
+  elementName: String
+  mask: String
+}
+
+type PostalCodeData {
+  label: String!
+  name: String
+  hidden: Boolean
+  maxLength: Int
+  size: String
+  required: Boolean
+  autoComplete: String
+  optionsCaption: String
+  options: [FieldOptionData!]
+  elementName: String
+  mask: String
+  forgottenURL: String
+}
+
+type DisplayDefinition {
+  name: String!
+  delimiter: String
+  delimiterAfter: String
+}
+
+type DisplayData {
+  minimal: [[DisplayDefinition!]!]!
+  compact: [[DisplayDefinition!]!]!
+  extended: [[DisplayDefinition!]!]!
+}
+
+type AddressFieldsData {
+  city: FieldData
+  complement: FieldData
+  country: FieldData
+  neighborhood: FieldData
+  number: FieldData
+  postalCode: PostalCodeData
+  receiverName: FieldData
+  reference: FieldData
+  state: FieldData
+  street: FieldData
+}
+
+type CountryData {
+  countryISO: String!
+  addressFields: AddressFieldsData!
+  display: DisplayData!
+  phone: PhoneData!
+}
+
+type Query {
+  countryData(country: String!): CountryData @settings(settingsType: "workspace")
+
+  allCountriesData: [CountryData!]! @settings(settingsType: "workspace")
+}
