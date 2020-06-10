@@ -71,12 +71,20 @@ type LocationSelectData {
   countryData: JSON
 }
 
+type DocumentData {
+  documentType: String!
+  required: Boolean!
+  validationEndpointTemplate: String
+  mask: String
+}
+
 type CountryData {
   countryISO: String!
   addressFields: AddressFieldsData!
   display: DisplayData!
   locationSelect: LocationSelectData
   phone: PhoneData!
+  document: DocumentData
 }
 
 type Query {

@@ -139,6 +139,28 @@
         }
       },
       "required": ["countryCode", "pattern"]
+    },
+    "document": {
+      "type": "object",
+      "properties": {
+        "documentType": {
+          "type": "string",
+          "description": "Name of the document"
+        },
+        "required": {
+          "type": "boolean",
+          "default": false
+        },
+        "validationEndpointTemplate": {
+          "type": "string",
+          "description": "Endpoint which acceps the document value and returns a validation result. It should have {value} string somewhere in the template and accept GET requests",
+          "examples": ["/cpf/validate/{value}"]
+        },
+        "mask": {
+          "type": "string"
+        }
+      },
+      "required": ["documentType"]
     }
   },
   "required": ["countryISO", "addressFields", "display", "phone"]
