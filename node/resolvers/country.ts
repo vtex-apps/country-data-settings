@@ -28,10 +28,11 @@ export const queries = {
     { country }: { country: string },
     ctx: ServiceContext
   ) => {
-    return (
-      getSettingsByCountry(ctx.vtex.settings.dependenciesSettings)[country] ??
-      []
-    )
+    const data = getSettingsByCountry(ctx.vtex.settings.dependenciesSettings)[
+      country
+    ]
+
+    return data
   },
   allCountriesData: (_: void, __: void, ctx: ServiceContext) => {
     return Object.values(
