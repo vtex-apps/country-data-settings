@@ -34,6 +34,17 @@ export const queries = {
 
     return data
   },
+  countriesData: (
+    _: void,
+    { countries }: { countries: string[] },
+    ctx: ServiceContext
+  ) => {
+    return Object.values(
+      getSettingsByCountry(ctx.vtex.settings.dependenciesSettings)
+    ).filter(countryConfiguration =>
+      countries.includes(countryConfiguration.countryISO)
+    )
+  },
   allCountriesData: (_: void, __: void, ctx: ServiceContext) => {
     return Object.values(
       getSettingsByCountry(ctx.vtex.settings.dependenciesSettings)

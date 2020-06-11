@@ -83,5 +83,8 @@ type Query {
   countryData(country: String!): CountryData
     @settings(settingsType: "workspace")
 
+  countriesData(countries: [String!]!): [CountryData!]!
+    @settings(settingsType: "workspace")
+
   allCountriesData: [CountryData!]! @settings(settingsType: "workspace")
 }
