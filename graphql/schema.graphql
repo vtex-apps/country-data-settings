@@ -1,6 +1,7 @@
 type PhoneData {
   countryCode: String!
   mask: String
+  pattern: String!
 }
 
 type FieldOptionData {

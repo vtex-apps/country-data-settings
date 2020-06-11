@@ -132,9 +132,13 @@
         "mask": {
           "type": "string",
           "description": "Phone number mask for value display."
+        },
+        "pattern": {
+          "type": "string",
+          "description": "Regex used for the phone number validation"
         }
       },
-      "required": ["countryCode"]
+      "required": ["countryCode", "pattern"]
     }
   },
   "required": ["countryISO", "addressFields", "display", "phone"]
