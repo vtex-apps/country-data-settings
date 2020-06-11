@@ -3,6 +3,11 @@
   "private": true,
   "license": "UNLICENSED",
   "devDependencies": {
+    "@types/graphql-type-json": "^0.3.2",
     "@vtex/api": "6.31.1"
+  },
+  "dependencies": {
+    "graphql": "^14.6.0",
+    "graphql-type-json": "^0.3.2"
   }
 }

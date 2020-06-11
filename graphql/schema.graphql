@@ -1,3 +1,6 @@
+scalar JSON
+scalar JSONObject
+
 type PhoneData {
   countryCode: String!
   mask: String
@@ -63,15 +66,22 @@ type AddressFieldsData {
   street: FieldData
 }
 
+type LocationSelectData {
+  fields: [FieldData!]!
+  countryData: JSON
+}
+
 type CountryData {
   countryISO: String!
   addressFields: AddressFieldsData!
   display: DisplayData!
+  locationSelect: LocationSelectData
   phone: PhoneData!
 }
 
 type Query {
-  countryData(country: String!): CountryData @settings(settingsType: "workspace")
+  countryData(country: String!): CountryData
+    @settings(settingsType: "workspace")
 
   allCountriesData: [CountryData!]! @settings(settingsType: "workspace")
 }
