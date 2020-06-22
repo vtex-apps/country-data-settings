@@ -22,6 +22,29 @@ const getSettingsByCountry = (settings: Configuration[]) => {
   return settingsByCountry
 }
 
+export const root = {
+  AdditionalFieldData: {
+    __resolveType: (additionalData: any) => {
+      if ('forgottenURL' in additionalData) {
+        return 'PostalCodeData'
+      }
+
+      return null
+    },
+  },
+  Field: {
+    additionalData: (field: AddressFieldsConfiguration | PostalCodeField) => {
+      if ('forgottenURL' in field) {
+        return {
+          forgottenURL: field.forgottenURL,
+        }
+      }
+
+      return null
+    },
+  },
+}
+
 export const queries = {
   countryData: (
     _: void,

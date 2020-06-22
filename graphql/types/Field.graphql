@@ -1,9 +1,15 @@
+type PostalCodeData {
+  forgottenURL: String
+}
+
+union AdditionalFieldData = PostalCodeData
+
 type FieldOptionData {
   label: String!
   value: String!
 }
 
-interface Field {
+type Field {
   label: String!
   name: String
   hidden: Boolean
@@ -15,33 +21,5 @@ interface Field {
   options: [FieldOptionData!]
   elementName: String
   mask: String
-}
-
-type FieldData implements Field {
-  label: String!
-  name: String
-  hidden: Boolean
-  maxLength: Int
-  size: String
-  required: Boolean
-  autoComplete: String
-  optionsCaption: String
-  options: [FieldOptionData!]
-  elementName: String
-  mask: String
-}
-
-type PostalCodeData implements Field {
-  label: String!
-  name: String
-  hidden: Boolean
-  maxLength: Int
-  size: String
-  required: Boolean
-  autoComplete: String
-  optionsCaption: String
-  options: [FieldOptionData!]
-  elementName: String
-  mask: String
-  forgottenURL: String
+  additionalData: AdditionalFieldData
 }

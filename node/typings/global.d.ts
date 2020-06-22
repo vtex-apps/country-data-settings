@@ -35,6 +35,8 @@ declare global {
     delimiterAfter: string
   }
 
+  type PostalCodeField = AddressFieldsConfiguration & PostalCodeConfiguration
+
   interface AddressFieldsConfiguration {
     [field in AddressField]: AddressFieldConfiguration
     postalCode?: AddressFieldConfiguration & PostalCodeConfiguration

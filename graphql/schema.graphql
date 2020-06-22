@@ -20,20 +20,20 @@ type DisplayData {
 }
 
 type AddressFieldsData {
-  city: FieldData
-  complement: FieldData
-  country: FieldData
-  neighborhood: FieldData
-  number: FieldData
-  postalCode: PostalCodeData
-  receiverName: FieldData
-  reference: FieldData
-  state: FieldData
-  street: FieldData
+  city: Field
+  complement: Field
+  country: Field
+  neighborhood: Field
+  number: Field
+  postalCode: Field
+  receiverName: Field
+  reference: Field
+  state: Field
+  street: Field
 }
 
 type LocationSelectData {
-  fields: [FieldData!]!
+  fields: [Field!]!
   countryData: JSON
 }
 
