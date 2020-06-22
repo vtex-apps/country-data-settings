@@ -7,40 +7,6 @@ type PhoneData {
   pattern: String!
 }
 
-type FieldOptionData {
-  label: String!
-  value: String!
-}
-
-type FieldData {
-  label: String!
-  name: String
-  hidden: Boolean
-  maxLength: Int
-  size: String
-  required: Boolean
-  autoComplete: String
-  optionsCaption: String
-  options: [FieldOptionData!]
-  elementName: String
-  mask: String
-}
-
-type PostalCodeData {
-  label: String!
-  name: String
-  hidden: Boolean
-  maxLength: Int
-  size: String
-  required: Boolean
-  autoComplete: String
-  optionsCaption: String
-  options: [FieldOptionData!]
-  elementName: String
-  mask: String
-  forgottenURL: String
-}
-
 type DisplayDefinition {
   name: String!
   delimiter: String

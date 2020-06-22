@@ -1,0 +1,47 @@
+type FieldOptionData {
+  label: String!
+  value: String!
+}
+
+interface Field {
+  label: String!
+  name: String
+  hidden: Boolean
+  maxLength: Int
+  size: String
+  required: Boolean
+  autoComplete: String
+  optionsCaption: String
+  options: [FieldOptionData!]
+  elementName: String
+  mask: String
+}
+
+type FieldData implements Field {
+  label: String!
+  name: String
+  hidden: Boolean
+  maxLength: Int
+  size: String
+  required: Boolean
+  autoComplete: String
+  optionsCaption: String
+  options: [FieldOptionData!]
+  elementName: String
+  mask: String
+}
+
+type PostalCodeData implements Field {
+  label: String!
+  name: String
+  hidden: Boolean
+  maxLength: Int
+  size: String
+  required: Boolean
+  autoComplete: String
+  optionsCaption: String
+  options: [FieldOptionData!]
+  elementName: String
+  mask: String
+  forgottenURL: String
+}
