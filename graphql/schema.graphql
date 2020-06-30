@@ -1,0 +1,56 @@
+scalar JSON
+scalar JSONObject
+
+type PhoneData {
+  countryCode: String!
+  mask: String
+  pattern: String!
+}
+
+type DisplayDefinition {
+  name: String!
+  delimiter: String
+  delimiterAfter: String
+}
+
+type DisplayData {
+  minimal: [[DisplayDefinition!]!]!
+  compact: [[DisplayDefinition!]!]!
+  extended: [[DisplayDefinition!]!]!
+}
+
+type AddressFieldsData {
+  city: Field
+  complement: Field
+  country: Field
+  neighborhood: Field
+  number: Field
+  postalCode: Field
+  receiverName: Field
+  reference: Field
+  state: Field
+  street: Field
+}
+
+type LocationSelectData {
+  fields: [Field!]!
+  countryData: JSON
+}
+
+type CountryData {
+  countryISO: String!
+  addressFields: AddressFieldsData!
+  display: DisplayData!
+  locationSelect: LocationSelectData
+  phone: PhoneData!
+}
+
+type Query {
+  countryData(country: String!): CountryData
+    @settings(settingsType: "workspace")
+
+  countriesData(countries: [String!]!): [CountryData!]!
+    @settings(settingsType: "workspace")
+
+  allCountriesData: [CountryData!]! @settings(settingsType: "workspace")
+}
