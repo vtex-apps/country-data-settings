@@ -4,7 +4,7 @@
   "license": "UNLICENSED",
   "devDependencies": {
     "@types/graphql-type-json": "^0.3.2",
-    "@vtex/api": "6.31.1"
+    "@vtex/api": "6.33.0"
   },
   "dependencies": {
     "graphql": "^14.6.0",
