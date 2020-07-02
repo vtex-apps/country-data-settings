@@ -123,10 +123,10 @@
     "@types/express-serve-static-core" "*"
     "@types/mime" "*"
 
-"@vtex/api@6.31.1":
-  version "6.31.1"
-  resolved "https://registry.yarnpkg.com/@vtex/api/-/api-6.31.1.tgz#dcb7bddb0b77d6a1ad936da0a6bbc42d577b7883"
-  integrity sha512-KogyA3ZL4behY/8HG7SormxbcOnETJAre6sWkUvSbl1SYLoeL/znvMigzp5812lGDxqjwcIxW6AdFP2Qla+8zw==
+"@vtex/api@6.33.0":
+  version "6.33.0"
+  resolved "https://registry.yarnpkg.com/@vtex/api/-/api-6.33.0.tgz#8aca963a8b4a33d06321f8de3f5b224d4eec76ce"
+  integrity sha512-eguTB4WgSJJ+Hi90Uvy8jiu/OtyB6PV4IpixDH6197knFmmaif6L7lf34n8zkJ2sbJLFsYHDbk3WgCU2qNVexA==
   dependencies:
     "@types/koa" "^2.11.0"
     "@types/koa-compose" "^3.2.3"
@@ -175,6 +175,11 @@
   integrity sha512-Q6V8E1IR/U0H6uTB1G+gH4ugL4Kw1l/WsK7W46LQBsxv4ISlZcO7dXPlWrL4RzRcVam5yzGAwNkv2wJdW61tAA==
   dependencies:
     is-stream "^2.0.0"
+
+"@vtex/tsconfig@^0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@vtex/tsconfig/-/tsconfig-0.5.0.tgz#1314b4cb0c9503ebcae3afd1ec36106dc457cd5c"
+  integrity sha512-WDdawn5pzTj22tVod/MhWU+qCnYu4cCKtmEErwPC9TebJ5OGJTxJnFKskAMJgKjIZmAORDZBq3fsvzCcxC1mgg==
 
 "@wry/equality@^0.1.2", "@wry/equality@^0.1.9":
   version "0.1.11"
