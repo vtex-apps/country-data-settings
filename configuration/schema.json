@@ -69,6 +69,10 @@
         "mask": {
           "type": "string",
           "description": "Optional mask to format the field for display."
+        },
+        "pattern": {
+          "type": "string",
+          "description": "Regex used for the field validation."
         }
       },
       "required": ["label"]

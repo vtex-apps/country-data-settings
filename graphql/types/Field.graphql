@@ -22,4 +22,5 @@ type Field {
   elementName: String
   mask: String
   additionalData: AdditionalFieldData
+  pattern: String
 }
