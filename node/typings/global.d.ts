@@ -25,6 +25,7 @@ declare global {
 
   interface DisplayData {
     minimal: DisplayDefinition[][]
+    brief: DisplayDefinition[][]
     compact: DisplayDefinition[][]
     expanded: DisplayDefinition[][]
   }

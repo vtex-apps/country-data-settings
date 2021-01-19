@@ -107,6 +107,9 @@
         "minimal": {
           "$ref": "#/definitions/addressDisplay"
         },
+        "brief": {
+          "$ref": "#/definitions/addressDisplay"
+        },
         "compact": {
           "$ref": "#/definitions/addressDisplay"
         },

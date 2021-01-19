@@ -15,6 +15,7 @@ type DisplayDefinition {
 
 type DisplayData {
   minimal: [[DisplayDefinition!]!]!
+  brief: [[DisplayDefinition!]!]!
   compact: [[DisplayDefinition!]!]!
   extended: [[DisplayDefinition!]!]!
 }
