@@ -48,13 +48,13 @@ type CountryData {
 type Query {
   countryData(country: String!): CountryData
     @settings(settingsType: "workspace")
-    @cacheControl(scope: PUBLIC, maxAge: MEDIUM)
+    @cacheControl(scope: PUBLIC, maxAge: SHORT)
 
   countriesData(countries: [String!]!): [CountryData!]!
     @settings(settingsType: "workspace")
-    @cacheControl(scope: PUBLIC, maxAge: MEDIUM)
+    @cacheControl(scope: PUBLIC, maxAge: SHORT)
 
   allCountriesData: [CountryData!]!
     @settings(settingsType: "workspace")
-    @cacheControl(scope: PUBLIC, maxAge: MEDIUM)
+    @cacheControl(scope: PUBLIC, maxAge: SHORT)
 }
