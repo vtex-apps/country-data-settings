@@ -1,6 +1,12 @@
 scalar JSON
 scalar JSONObject
 
+type CorpDocData {
+  name: String!
+  abbreviation: String!
+  mask: String!
+}
+
 type PhoneData {
   countryCode: String!
   mask: String
@@ -43,6 +49,7 @@ type CountryData {
   display: DisplayData!
   locationSelect: LocationSelectData
   phone: PhoneData!
+  corporateDocument: CorpDocData!
 }
 
 type Query {
