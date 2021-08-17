@@ -163,5 +163,5 @@
       "required": ["name", "abbreviation", "mask"]
     }
   },
-  "required": ["countryISO", "addressFields", "display", "phone", "legalPersonTaxId"]
+  "required": ["countryISO", "addressFields", "display", "phone"]
 }

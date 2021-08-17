@@ -50,7 +50,7 @@ type CountryData {
   display: DisplayData!
   locationSelect: LocationSelectData
   phone: PhoneData!
-  legalPersonTaxId: LegalPersonTaxIdData!
+  legalPersonTaxId: LegalPersonTaxIdData
 }
 
 type Query {
