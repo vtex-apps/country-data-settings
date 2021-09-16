@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.5.0] - 2021-09-16
+
 ## [0.4.1] - 2021-05-07
 ### Changed
 - Decrease max age of public queries.
