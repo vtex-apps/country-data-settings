@@ -143,6 +143,24 @@
         }
       },
       "required": ["countryCode", "pattern"]
+    },
+    "legalPersonTaxId": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the document in the specific country. E.g.: Cadastro Nacional da Pessoa Jurídica for Brazil and Employer Identification Number for the USA"
+        },
+        "abbreviation": {
+          "type": "string",
+          "description": "Abbreviation for the document name, such as CNPJ for Brazil."
+        },
+        "mask": {
+          "type": "string",
+          "description": "Tax ID mask for value display"
+        }
+      },
+      "required": ["name", "abbreviation", "mask"]
     }
   },
   "required": ["countryISO", "addressFields", "display", "phone"]

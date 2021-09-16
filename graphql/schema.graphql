@@ -1,6 +1,13 @@
 scalar JSON
 scalar JSONObject
 
+# https://www.oecd.org/tax/automatic-exchange/crs-implementation-and-assistance/tax-identification-numbers/
+type LegalPersonTaxIdData {
+  name: String!
+  abbreviation: String!
+  mask: String!
+}
+
 type PhoneData {
   countryCode: String!
   mask: String
@@ -43,6 +50,7 @@ type CountryData {
   display: DisplayData!
   locationSelect: LocationSelectData
   phone: PhoneData!
+  legalPersonTaxId: LegalPersonTaxIdData
 }
 
 type Query {
